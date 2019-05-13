@@ -1,0 +1,29 @@
+## jdk8新特性  
+
+- lambda表达式：
+	允许函数作为一个方法的参数；param -> expression  
+
+- 函数式接口：很好的支持lambda表达式
+
+- 方法引用：通过方法的名字来指向方法；使用::
+
+- 接口默认方法
+
+- optional类：一个可以为null的容器对象
+	optional主要用作返回类型，在获取到这个类型的实例后，如果它有值，则可以取得这个值，否则进行一些替代行为
+	- 访问Optional对象的值：get()
+	- 返回默认值：orElse()
+	- 返回异常：oeElseThrow(()-> new IllegalArgumentException)
+	- 转换值：Optional.ofNullable().map().orElse()
+	- 过滤值：Optional.ofNullable.filter()
+	
+
+- Stream：类似用 SQL 语句从数据库查询数据的直观方式来提供一种对 Java 集合运算和表达的高阶抽象
+	- stream为集合创建串行流
+	- map方法用于映射每个元素到对应的处理结果
+	- filter方法通过设置过滤条件过滤出元素
+	- limit用于获取指定数量的流
+	- forEach迭代流中的每个数据
+	- sorted对流进行排序
+	- Collectors实现很多归约操作：将流转换成集合和聚合元素
+	- 统计结果count
