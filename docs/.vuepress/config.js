@@ -26,9 +26,9 @@ module.exports = {
 			  title:'Java',
 			  collapsable: true,
 			  children:[
-				'/share/多线程',
-				'/share/java8新特性',
-				'/share/设计模式',
+				'/share/java/多线程',
+				'/share/java/jdk8新特性',
+				'/share/java/设计模式',
 			   
 			  ]
 			},
@@ -36,9 +36,9 @@ module.exports = {
 			  title:'数据库',
 			  collapsable: true,
 			  children:[
-				'/share/执行计划',
-				'/share/索引-高级',
-				'/share/es',
+				'/share/数据库/执行计划',
+				'/share/数据库/索引',
+				'/share/数据库/执行计划',
 			  ]
 			},
 			{
@@ -46,6 +46,20 @@ module.exports = {
 			  collapsable: true,
 			  children:[
 				'/share/Redis',
+			  ]
+			},
+			{
+			  title:'ES',
+			  collapsable: true,
+			  children:[
+				'/share/es',
+			  ]
+			},
+			{
+			  title:'知识点',
+			  collapsable: true,
+			  children:[
+				'/share/知识点',
 			  ]
 			},
 			{
