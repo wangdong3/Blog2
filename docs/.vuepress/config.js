@@ -36,7 +36,7 @@ module.exports = {
 			  title:'数据库',
 			  collapsable: true,
 			  children:[
-				'/share/数据库/执行计划',
+				'/share/数据库/数据库设计',
 				'/share/数据库/索引',
 				'/share/数据库/执行计划',
 			  ]
@@ -73,11 +73,11 @@ module.exports = {
 		},
 		// 这是嵌套标题链接，自动显示当前激活（导航）页面标题的链接，即显示深度（h1-h6的深度）
         sidebarDepth: 0,
-	lastUpdated: 'Last Updated', 
+		lastUpdated: 'Last Updated', 
 		serviceWorker: true
 	},
-  markdown: {
-	lineNumbers: true,
-	toc: { includeLevel: [2, 3, 4, 5, 6] }
-  },
+	markdown: {
+		lineNumbers: true,
+		toc: { includeLevel: [2, 3, 4, 5, 6] }
+	},
 }
