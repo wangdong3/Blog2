@@ -41,18 +41,23 @@ default boolean exists(String key) {
 
 - 返回默认值：orElse()
 
-```
+```java
 //如果为空则默认
 bookletService.select(record.getFcId()).map(JzfcEntity::getExpose).orElse(2);
 ```
 
 - 返回异常：oeElseThrow(()-> new IllegalArgumentException)
 
-```
+```java
 return tokenService.getByServer(ysJzServer).orElseThrow(RuntimeException::new);
 ```
 
-- 转换值：Optional.ofNullable().map().orElse()
+- 转换值：Optional.ofNullable().map()
+
+```java
+Optional.ofNullable(service.selectJzByBh(dossierId))
+.map(DossierResource::of)
+```
 
 - 过滤值：Optional.ofNullable.filter()
 
