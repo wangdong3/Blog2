@@ -27,7 +27,9 @@ module.exports = {
 			  collapsable: true,
 			  children:[
 				'/share/java/多线程',
-				'/share/java/jdk8新特性',
+				'/share/java/Java8',
+				'/share/java/单元测试',
+				'/share/java/jvm',
 				'/share/java/设计模式',
 			   
 			  ]
@@ -63,9 +65,10 @@ module.exports = {
 			  ]
 			},
 			{
-			  title:'SpringBoot',
+			  title:'Spring',
 			  collapsable: true,
 			  children:[
+				'/share/spring',
 				'/share/springboot',
 			  ]
 			}
@@ -78,6 +81,6 @@ module.exports = {
 	},
 	markdown: {
 		lineNumbers: true,
-		toc: { includeLevel: [2, 3, 4, 5, 6] }
+		toc: { includeLevel: [2, 3] }
 	},
 }

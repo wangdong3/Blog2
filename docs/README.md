@@ -2,9 +2,9 @@
 home: true
 hidden: true
 tagline: '岁月不饶人，我亦未曾饶过岁月'
-heroImage: /img/logo.png 
+heroImage: /img/home.jpg
 actionText: home →
-heroText: 文档管理
+heroText: 
 actionLink: /homepage/
 ---
 

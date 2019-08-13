@@ -1,4 +1,4 @@
-# vuepress搭建静态网站步骤
+# vuepress搭建静态网站
 
 -  全局安装vuepress
 > npm install -g vuepress

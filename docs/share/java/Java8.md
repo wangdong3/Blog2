@@ -1,4 +1,6 @@
-## jdk8新特性  
+# Java8  
+
+## Java8新特性
 
 ### lambda表达式：
   允许函数作为一个方法的参数；(param -> expression)  
