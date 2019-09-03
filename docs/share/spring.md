@@ -43,10 +43,10 @@ AnnotationConfigApplicationContext applicationContext = new AnnotationConfigAppl
 ## spring注解
 ```java
 @Configuration 配置类;
-@Bean
+@Bean 注册组件
 @Scope 默认单例;
 @Lazy 懒加载;
-@Conditional
+@Conditional 按照条件给容器中注册组件
 @ComponentScan
 
 @Import：快速给容器导入一个组件;
@@ -75,11 +75,54 @@ AnnotationConfigApplicationContext applicationContext = new AnnotationConfigAppl
 
 ## 自动装配	
 
+@Autowired：构造器、属性、方法、参数，都是从容器中获取组件的值
+
+	1）标注在方法位置
+	2）标在构造器上，如果组件只有一个有参构造器，这个有参构造器的@Autowired可以省略
+	3）放在参数位置
+
+@Profile：指定组件在哪个环境下才能被注册到容器中，不指定则任何环境都不能注册该组件
+
+	1）加了环境标识的bean，只有这个环境被激活的时候，才能注册到容器中；默认是default环境
+	
+	2）该注解写在配置类上，在指定环境，该配置类中的配置才能生效
+	
+	3）没有标注环境标识的bean，任何环境都是加载的
+	
+	激活环境方式：
+		1）使用命令行动态参数，在虚拟机参数位置加载-Dspring.profiles.active=dev
+		2）代码的方式激活环境 		
+			1.创建IOC容器
+			2.设置需要激活的环境（applicationContext.getEnvironment().setActiveProfiles("test","dev")）
+			3.注册主配置类（applicationContext.register(Config.class)）
+			4.启动刷新容器
+
 ## IOC
-​	Spring注入的几种方式：set注入；构造函数注入；p命名空间注入
 
-## AOP
+## AOP：【动态代理】
 
+> 程序在运行期间，动态的将某段代码切入到指定方法指定位置进行运行
+
+	1.导入aop模块
+	2.定义业务逻辑类
+	3.定义切面类
+		通知方法：
+			前置通知（@Before）：在目标方法运行前运行
+			后置通知（@After）：在目标方法运行结束之后运行
+			返回通知（@AfterReturning）：目标方法正常返回后运行
+			异常通知（@AfterThrowing）：出现异常时运行
+			环绕通知（@Around）：动态代理，手动推进目标方法运行（joinPoint.procced）
+	4.切面类的方法上标注通知注解，写切入点表达式
+	5.切面类和业务逻辑类都加入到容器中
+	6.告诉spring哪个类是切面类，切面类上加注解@Aspect
+	7.给配置类加@EnableAspectJAutoProxy，开启基于注解的aop模式
+
+AOP原理
+
+	@EnableAspectJAutoProxy
+		@Import(AspectJAutoProxyRegistrar.class)
+			利用AspectJAutoProxyRegistrar自定义给容器中注册bean，AnnotationAwareAspectJAutoProxyCreator
+			
 ## 事务
 
 ## spring源码，设计模式
