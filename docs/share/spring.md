@@ -95,7 +95,7 @@ AnnotationConfigApplicationContext applicationContext = new AnnotationConfigAppl
 			1.创建IOC容器
 			2.设置需要激活的环境（applicationContext.getEnvironment().setActiveProfiles("test","dev")）
 			3.注册主配置类（applicationContext.register(Config.class)）
-			4.启动刷新容器
+			4.启动刷新容器refresh()
 
 ## IOC
 
@@ -123,6 +123,28 @@ AOP原理
 		@Import(AspectJAutoProxyRegistrar.class)
 			利用AspectJAutoProxyRegistrar自定义给容器中注册bean，AnnotationAwareAspectJAutoProxyCreator
 			
+		AnnotationAwareAspectJAutoProxyCreator
+			---
+			---implements 后置处理器、自动装配beanFactory
+			
+	    创建AnnotationAwareAspectJAutoProxyCreator过程：
+	        1）传入配置类，创建IOC容器
+	        2）注册配置类，调用refresh()，刷新容器
+	        3）registerBeanPostProcessor(beanFactory);注册bean的后置处理器，来方便拦截bean的创建
+	            1）先获取IOC容器已经定义了的需要创建对象的所有的BeanPostProcessor
+	            2）给容器中加别的BeanPostProcessor
+	            3）优先注册实现了PriorityOrdered接口的BeanPostProcessor
+	            4）在容器中注册实现了Ordered接口的BeanPostProcessor
+	            5）注册没实现优先级接口的BeanPostProcessor
+	            6）注册BeanPostProcessor，实际上是创建BeanPostProcessor对象，保存在容器中
+	            7）把BeanPostProcessor添加到BeanFactory中
+	        4）完成BeanFactory的初始化
+
 ## 事务
+
+	@EnableTransactionManagement
+		利用TransactionManagementConfigurationSelector给容器中导入组件，
+			AutoProxyRegistrar，给容器中注册AutoProxyCreator组件，利用后置处理器机制在对象创建以后，包装对  象，返回一个代理对象（增强器），代理对象执行方法利用拦截器链调用
+			ProxyTransactionManagementConfiguration，给容器中注册事务增强器，事务拦截器
 
 ## spring源码，设计模式
