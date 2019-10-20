@@ -47,3 +47,9 @@
 ## 垃圾回收机制
 
 ## JVM调优
+
+	控制台打印gc日志，通过设置JVM参数设置
+	
+	-Xms20m -Xmx20m -Xmn10m -XX:+PrintGCDetails 
+	-XX:+PrintGCTimeStamps 打印日志信息
+	-Xloggc:log_gc.log gc日志输出文件
