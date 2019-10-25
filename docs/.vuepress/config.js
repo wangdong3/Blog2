@@ -5,7 +5,6 @@ module.exports = {
 	host: 'localhost',
     port: 8086,
 	themeConfig:{
-
 		logo: '/img/logo.png',
 		nav:[	
 		  //{text: 'Home', link: '/'},
@@ -15,13 +14,13 @@ module.exports = {
 		],
 		sidebar: {
 		  '/share': [
-		    {
+		    /**{
 			  title:'vuepress相关',
 			  collapsable:true,
 			  children:[
 				'/share/vuepress搭建静态网站'
 			  ]
-		    },
+		    },**/
 			{
 			  title:'Java',
 			  collapsable: true,
@@ -30,8 +29,16 @@ module.exports = {
 				'/share/java/Java8',
 				'/share/java/单元测试',
 				'/share/java/jvm',
+				'/share/java/JMM',
 				'/share/java/设计模式',
 			   
+			  ]
+			},
+			{
+			  title:'数据结构',
+			  collapsable: true,
+			  children:[
+				'/share/数据结构/排序算法'
 			  ]
 			},
 			{
@@ -51,7 +58,7 @@ module.exports = {
 			  ]
 			},
 			{
-			  title:'ES',
+			  title:'ElasticSearch',
 			  collapsable: true,
 			  children:[
 				'/share/es',
@@ -81,6 +88,7 @@ module.exports = {
 	},
 	markdown: {
 		lineNumbers: true,
+		anchor: { permalink: false },
 		toc: { includeLevel: [2, 3] }
 	},
 }
