@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Spring | 文档管理</title>
+    <meta name="description" content="文档管理">
+    
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.d0c45ef5.css" as="style"><link rel="preload" href="/blog/assets/js/app.3e99f69d.js" as="script"><link rel="preload" href="/blog/assets/js/2.1d01ac6d.js" as="script"><link rel="preload" href="/blog/assets/js/18.fe9088bd.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.f5b859e5.js"><link rel="prefetch" href="/blog/assets/js/11.b37e8187.js"><link rel="prefetch" href="/blog/assets/js/12.9889c9d8.js"><link rel="prefetch" href="/blog/assets/js/13.ed0f9110.js"><link rel="prefetch" href="/blog/assets/js/14.05748518.js"><link rel="prefetch" href="/blog/assets/js/15.47cd0f13.js"><link rel="prefetch" href="/blog/assets/js/16.cb844129.js"><link rel="prefetch" href="/blog/assets/js/17.ac47ed2d.js"><link rel="prefetch" href="/blog/assets/js/19.64dec7e8.js"><link rel="prefetch" href="/blog/assets/js/20.6fce1f9f.js"><link rel="prefetch" href="/blog/assets/js/21.f5e1e54f.js"><link rel="prefetch" href="/blog/assets/js/22.8c07f2e7.js"><link rel="prefetch" href="/blog/assets/js/23.37e8ce6a.js"><link rel="prefetch" href="/blog/assets/js/24.cca64a4b.js"><link rel="prefetch" href="/blog/assets/js/25.ab895184.js"><link rel="prefetch" href="/blog/assets/js/26.a49d3732.js"><link rel="prefetch" href="/blog/assets/js/27.e28f9ecd.js"><link rel="prefetch" href="/blog/assets/js/3.95ec7ebd.js"><link rel="prefetch" href="/blog/assets/js/4.61334da3.js"><link rel="prefetch" href="/blog/assets/js/5.82ac8d76.js"><link rel="prefetch" href="/blog/assets/js/6.491b24b7.js"><link rel="prefetch" href="/blog/assets/js/7.3c1d5c8e.js"><link rel="prefetch" href="/blog/assets/js/8.560c0130.js"><link rel="prefetch" href="/blog/assets/js/9.cd94200d.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.d0c45ef5.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><img src="/blog/img/logo.png" alt="文档管理" class="logo"> <span class="site-name can-hide">文档管理</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/share/" class="nav-link router-link-active">Share</a></div><div class="nav-item"><a href="http://blog.csdn.net" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  CSDN
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="https://github.com/wangdong3" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog/share/" class="nav-link router-link-active">Share</a></div><div class="nav-item"><a href="http://blog.csdn.net" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  CSDN
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="https://github.com/wangdong3" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Java</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>数据结构</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>数据库</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Redis</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>ElasticSearch</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>知识点</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Spring</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/share/spring.html" class="active sidebar-link">Spring</a></li><li><a href="/blog/share/springboot.html" class="sidebar-link">SpringBoot</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="content default"><h1 id="spring">Spring</h1> <h2 id="spring-bean生命周期">spring bean生命周期</h2> <p><strong>定义 ---- 初始化 ---- 销毁</strong></p> <p>1.我们可以自定义初始化和销毁方法，容器在bean进行到当前生命周期时，调用我们自定义的初始化和销毁方法：</p> <pre><code>init() destory()
+通过@Bean 指定init-method 和 destory-method；
+</code></pre> <p>2.让bean实现InitializingBean(定义初始化逻辑)，DisposableBean(定义销毁逻辑)</p> <p>3.使用@PostConstruct，在bean创建完成，并且属性赋值完成，执行初始化方法，@PreDestory，在容器销毁bean之前，通知我们进行清理工作</p> <p>4.BeanPostProcessor，bean的后置处理器，在bean初始化前后进行一些后置处理工作；</p> <pre><code>postProcessBeforeInitialization();在初始化之前
+postProcessAfterInitialization();在初始化之后
+</code></pre> <blockquote><p>spring底层对BeanPostProcessor的使用：</p> <p>​	bean赋值、注入其他组件、@Autowired、生命周期注解、@Async等等</p></blockquote> <ol><li>构造（对象创建）：</li></ol> <div class="language-java line-numbers-mode"><pre class="language-java"><code>创建IOC容器：
+<span class="token class-name">AnnotationConfigApplicationContext</span> applicationContext <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">AnnotationConfigApplicationContext</span><span class="token punctuation">(</span>配置类<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+单实例：容器启动时创建
+多实例：获取时创建
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><ol start="2"><li><p>初始化：</p> <p>对象创建完成，并赋值好，调用初始化方法</p></li> <li><p>销毁：</p> <p>容器关闭，对象销毁</p></li></ol> <h2 id="spring注解">spring注解</h2> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token annotation punctuation">@Configuration</span> 配置类<span class="token punctuation">;</span>
+<span class="token annotation punctuation">@Bean</span> 注册组件
+<span class="token annotation punctuation">@Scope</span> 默认单例<span class="token punctuation">;</span>
+<span class="token annotation punctuation">@Lazy</span> 懒加载<span class="token punctuation">;</span>
+<span class="token annotation punctuation">@Conditional</span> 按照条件给容器中注册组件
+<span class="token annotation punctuation">@ComponentScan</span>
+
+<span class="token annotation punctuation">@Import</span>：快速给容器导入一个组件<span class="token punctuation">;</span>
+	<span class="token class-name">ImportSelector</span>
+	<span class="token class-name">ImportBeanDefinitionRegister</span>
+	
+<span class="token annotation punctuation">@PropertySource</span><span class="token punctuation">(</span>value<span class="token operator">=</span><span class="token punctuation">{</span><span class="token string">&quot;classpath:/xx.properties&quot;</span><span class="token punctuation">}</span><span class="token punctuation">)</span>，加载外部配置文件<span class="token punctuation">;</span>
+<span class="token annotation punctuation">@Value</span>赋值：基本数值、#<span class="token punctuation">{</span><span class="token punctuation">}</span>、$<span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token annotation punctuation">@Autowired</span>：自动装配 spring利用依赖注入，完成对容器中各个组件的依赖关系赋值；
+	<span class="token number">1</span>）默认按照类型去容器中找对应的组件<span class="token punctuation">;</span>
+	<span class="token number">2</span>）如果找到多个类型相同的组件，再将属性的名称作为组件的ID去容器中查找<span class="token punctuation">;</span>
+	<span class="token number">3</span>）<span class="token annotation punctuation">@Qualifier</span><span class="token punctuation">(</span><span class="token string">&quot;属性名称&quot;</span><span class="token punctuation">)</span>，指定需要装配的组件的ID，而不是使用属性名<span class="token punctuation">;</span>
+	<span class="token number">4</span>）自动装配默认要将属性赋值好，没有就会报错，可以使用<span class="token annotation punctuation">@Autowired</span><span class="token punctuation">(</span>required<span class="token operator">=</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token number">5</span>）<span class="token annotation punctuation">@Primary</span>，让spring自动装配的时候，默认使用首选bean，也可以继续使用<span class="token annotation punctuation">@Qualifier</span>指定装配
+	
+<span class="token annotation punctuation">@Resource</span> <span class="token punctuation">[</span>JSR250 java规范的注解<span class="token punctuation">]</span>
+	可以和<span class="token annotation punctuation">@Autowired</span>一样实现自动装配功能，默认按照属性名称来装配
+	没有支持<span class="token annotation punctuation">@Primary</span>使用首选bean
+	没有支持<span class="token annotation punctuation">@Autowired</span><span class="token punctuation">(</span>required<span class="token operator">=</span><span class="token boolean">false</span><span class="token punctuation">)</span>
+        
+<span class="token annotation punctuation">@Inject</span> <span class="token punctuation">[</span>JSR330 java规范的注解<span class="token punctuation">]</span>
+	需要导入javax<span class="token punctuation">.</span>inject的包，和<span class="token annotation punctuation">@Autowired</span>的功能一样
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br></div></div><h2 id="自动装配">自动装配</h2> <p>@Autowired：构造器、属性、方法、参数，都是从容器中获取组件的值</p> <pre><code>1）标注在方法位置
+2）标在构造器上，如果组件只有一个有参构造器，这个有参构造器的@Autowired可以省略
+3）放在参数位置
+</code></pre> <p>@Profile：指定组件在哪个环境下才能被注册到容器中，不指定则任何环境都不能注册该组件</p> <pre><code>1）加了环境标识的bean，只有这个环境被激活的时候，才能注册到容器中；默认是default环境
+
+2）该注解写在配置类上，在指定环境，该配置类中的配置才能生效
+
+3）没有标注环境标识的bean，任何环境都是加载的
+
+激活环境方式：
+	1）使用命令行动态参数，在虚拟机参数位置加载-Dspring.profiles.active=dev
+	2）代码的方式激活环境 		
+		1.创建IOC容器
+		2.设置需要激活的环境（applicationContext.getEnvironment().setActiveProfiles(&quot;test&quot;,&quot;dev&quot;)）
+		3.注册主配置类（applicationContext.register(Config.class)）
+		4.启动刷新容器refresh()
+</code></pre> <h2 id="ioc">IOC</h2> <h2 id="aop：【动态代理】">AOP：【动态代理】</h2> <blockquote><p>程序在运行期间，动态的将某段代码切入到指定方法指定位置进行运行</p></blockquote> <pre><code>1.导入aop模块
+2.定义业务逻辑类
+3.定义切面类
+	通知方法：
+		前置通知（@Before）：在目标方法运行前运行
+		后置通知（@After）：在目标方法运行结束之后运行
+		返回通知（@AfterReturning）：目标方法正常返回后运行
+		异常通知（@AfterThrowing）：出现异常时运行
+		环绕通知（@Around）：动态代理，手动推进目标方法运行（joinPoint.procced）
+4.切面类的方法上标注通知注解，写切入点表达式
+5.切面类和业务逻辑类都加入到容器中
+6.告诉spring哪个类是切面类，切面类上加注解@Aspect
+7.给配置类加@EnableAspectJAutoProxy，开启基于注解的aop模式
+</code></pre> <p>AOP原理</p> <pre><code>@EnableAspectJAutoProxy
+	@Import(AspectJAutoProxyRegistrar.class)
+		利用AspectJAutoProxyRegistrar自定义给容器中注册bean，AnnotationAwareAspectJAutoProxyCreator
+		
+	AnnotationAwareAspectJAutoProxyCreator
+		---
+		---implements 后置处理器、自动装配beanFactory
+		
+    创建AnnotationAwareAspectJAutoProxyCreator过程：
+        1）传入配置类，创建IOC容器
+        2）注册配置类，调用refresh()，刷新容器
+        3）registerBeanPostProcessor(beanFactory);注册bean的后置处理器，来方便拦截bean的创建
+            1）先获取IOC容器已经定义了的需要创建对象的所有的BeanPostProcessor
+            2）给容器中加别的BeanPostProcessor
+            3）优先注册实现了PriorityOrdered接口的BeanPostProcessor
+            4）在容器中注册实现了Ordered接口的BeanPostProcessor
+            5）注册没实现优先级接口的BeanPostProcessor
+            6）注册BeanPostProcessor，实际上是创建BeanPostProcessor对象，保存在容器中
+            7）把BeanPostProcessor添加到BeanFactory中
+        4）完成BeanFactory的初始化
+</code></pre> <h2 id="事务">事务</h2> <pre><code>@EnableTransactionManagement
+	利用TransactionManagementConfigurationSelector给容器中导入组件，
+		AutoProxyRegistrar，给容器中注册AutoProxyCreator组件，利用后置处理器机制在对象创建以后，包装对  象，返回一个代理对象（增强器），代理对象执行方法利用拦截器链调用
+		ProxyTransactionManagementConfiguration，给容器中注册事务增强器，事务拦截器
+</code></pre> <h2 id="spring源码，设计模式">spring源码，设计模式</h2></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">9/5/2019, 10:00:59 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/blog/share/知识点.html" class="prev">
+          知识点
+        </a></span> <span class="next"><a href="/blog/share/springboot.html">
+          SpringBoot
+        </a>
+        →
+      </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/blog/assets/js/app.3e99f69d.js" defer></script><script src="/blog/assets/js/2.1d01ac6d.js" defer></script><script src="/blog/assets/js/18.fe9088bd.js" defer></script>
+  </body>
+</html>

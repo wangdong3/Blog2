@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Redis | 文档管理</title>
+    <meta name="description" content="文档管理">
+    
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.d0c45ef5.css" as="style"><link rel="preload" href="/blog/assets/js/app.3e99f69d.js" as="script"><link rel="preload" href="/blog/assets/js/2.1d01ac6d.js" as="script"><link rel="preload" href="/blog/assets/js/12.9889c9d8.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.f5b859e5.js"><link rel="prefetch" href="/blog/assets/js/11.b37e8187.js"><link rel="prefetch" href="/blog/assets/js/13.ed0f9110.js"><link rel="prefetch" href="/blog/assets/js/14.05748518.js"><link rel="prefetch" href="/blog/assets/js/15.47cd0f13.js"><link rel="prefetch" href="/blog/assets/js/16.cb844129.js"><link rel="prefetch" href="/blog/assets/js/17.ac47ed2d.js"><link rel="prefetch" href="/blog/assets/js/18.fe9088bd.js"><link rel="prefetch" href="/blog/assets/js/19.64dec7e8.js"><link rel="prefetch" href="/blog/assets/js/20.6fce1f9f.js"><link rel="prefetch" href="/blog/assets/js/21.f5e1e54f.js"><link rel="prefetch" href="/blog/assets/js/22.8c07f2e7.js"><link rel="prefetch" href="/blog/assets/js/23.37e8ce6a.js"><link rel="prefetch" href="/blog/assets/js/24.cca64a4b.js"><link rel="prefetch" href="/blog/assets/js/25.ab895184.js"><link rel="prefetch" href="/blog/assets/js/26.a49d3732.js"><link rel="prefetch" href="/blog/assets/js/27.e28f9ecd.js"><link rel="prefetch" href="/blog/assets/js/3.95ec7ebd.js"><link rel="prefetch" href="/blog/assets/js/4.61334da3.js"><link rel="prefetch" href="/blog/assets/js/5.82ac8d76.js"><link rel="prefetch" href="/blog/assets/js/6.491b24b7.js"><link rel="prefetch" href="/blog/assets/js/7.3c1d5c8e.js"><link rel="prefetch" href="/blog/assets/js/8.560c0130.js"><link rel="prefetch" href="/blog/assets/js/9.cd94200d.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.d0c45ef5.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><img src="/blog/img/logo.png" alt="文档管理" class="logo"> <span class="site-name can-hide">文档管理</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/share/" class="nav-link router-link-active">Share</a></div><div class="nav-item"><a href="http://blog.csdn.net" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  CSDN
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="https://github.com/wangdong3" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog/share/" class="nav-link router-link-active">Share</a></div><div class="nav-item"><a href="http://blog.csdn.net" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  CSDN
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="https://github.com/wangdong3" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Java</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>数据结构</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>数据库</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Redis</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/share/Redis.html" class="active sidebar-link">Redis</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>ElasticSearch</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>知识点</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Spring</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="content default"><h1 id="redis">Redis</h1> <p></p><div class="table-of-contents"><ul><li><a href="#redis是什么">Redis是什么</a></li><li><a href="#redis使用场景">Redis使用场景</a></li><li><a href="#redis支持哪些数据结构">Redis支持哪些数据结构</a></li><li><a href="#redis分布式锁">Redis分布式锁</a></li><li><a href="#实现异步队列">实现异步队列</a></li><li><a href="#同步机制-主从复制">同步机制 (主从复制)</a></li><li><a href="#哨兵机制-hearts">哨兵机制(♥️)</a></li><li><a href="#持久化">持久化</a></li><li><a href="#常见问题">常见问题</a></li><li><a href="#淘汰策略">淘汰策略</a></li></ul></div><p></p> <h2 id="redis是什么">Redis是什么</h2> <p>开源的，内存中的数据结构存储系统。</p> <p>基于内存又可持久化、key-value数据库。</p> <p>可以用作数据库、缓存和消息中间件。</p> <h2 id="redis使用场景">Redis使用场景</h2> <ul><li>缓存，session缓存</li> <li>消息队列</li> <li>分布式锁</li></ul> <h2 id="redis支持哪些数据结构">Redis支持哪些数据结构</h2> <ul><li>String</li> <li>list</li> <li>hash</li> <li>set</li> <li>sortedset</li></ul> <h2 id="redis分布式锁">Redis分布式锁</h2> <ul><li><p>setnx  expire</p> <p>setnx争抢锁，抢到之后用expire给锁加一个过期时间，防止锁忘记释放</p> <p>在释放锁之前，当前进程crash或重启，会怎样？把setnx和expire合成一条指令来使用</p></li></ul> <h2 id="实现异步队列">实现异步队列</h2> <p>用List结构作为队列，rpush生产消息，当lpop没有消息时，sleep一会再重试</p> <h2 id="同步机制-主从复制">同步机制 (主从复制)</h2> <p>配置：</p> <p><code>slaveof &lt;masterip&gt; &lt;masterport&gt;</code></p> <h2 id="哨兵机制">哨兵机制(♥️)</h2> <ul><li>解决主从复制的缺点</li> <li>当主节点出现故障，由Redis sentinel自动完成故障发现和转移，实现高可用</li></ul> <h2 id="持久化">持久化</h2> <ul><li><p>RDB   快照</p> <div class="language-shell line-numbers-mode"><pre class="language-text"><code>##rdb配置相关
+
+#时间策略
+save 900 1
+save 300 10
+save 60 10000
+
+#文件名称
+dbfilename dump.rdb
+
+#文件保存路径
+dir ./
+
+#如果持久化出错，主进程停止写入
+stop-writes-on-bgsave-error yes
+
+# 是否对RDB文件进行压缩，默认是yes
+rdbcompression yes
+
+#是否对rdb文件进行校验，默认是yes
+rdbchecksum yes
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br></div></div></li> <li><p>AOF   保存命令重新执行：包括命令的实时写入，AOF文件的重写</p> <p>命令写入--》追加到aof_buf--》同步到磁盘AOF文件。</p> <div class="language-shell line-numbers-mode"><pre class="language-text"><code>##aof配置相关
+
+#是否开启AOF
+appendonly no
+
+# The name of the append only file (default: &quot;appendonly.aof&quot;)
+appendfilename &quot;appendonly.aof&quot;
+
+#三种同步策略
+#每次接受到写命令，强制写入磁盘
+# appendfsync always
+
+#每秒写入一次
+appendfsync everysec
+#完全依赖操作系统写入
+# appendfsync no
+
+#在日志重写时，不进行命令追加操作，而是将其放到缓冲区里，避免与命令的追加造成DISK IO的冲突
+no-appendfsync-on-rewrite no
+#当前AOF文件是上次日志重写得到AOF文件大小的两倍时，自动启动新的日志重写过程
+auto-aof-rewrite-percentage 100
+#当前AOF文件启动新的日志重写过程的最小值，避免频繁重写
+auto-aof-rewrite-min-size 64mb
+
+#加载aof时如果有错如何处理
+aof-load-truncated yes
+
+# 文件重写策略
+aof-rewrite-incremental-fsync yes
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br></div></div></li></ul> <h2 id="常见问题">常见问题</h2> <ul><li>缓存雪崩  大量缓存失效，请求转到数据库，造成数据库的压力；设置失效时间点均匀分布，避免雪崩；在时间上加一个随机值，使得过期时间分散；</li> <li>缓存穿透   命中率； 缓存未命中，查询数据库空；设置默认值放到缓存里，这样就不会继续访问数据库</li> <li>实现消息队列，队列满了怎么办，消费不完怎么办？</li></ul> <h2 id="淘汰策略">淘汰策略</h2> <ol><li>设置过期中最近最少使用</li> <li>设置过期中将要过期的</li> <li>设置过期中任意数</li> <li>最近最少使用</li> <li>任意</li></ol></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">10/26/2019, 12:44:10 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/blog/share/数据库/执行计划.html" class="prev">
+          数据库 - 执行计划
+        </a></span> <span class="next"><a href="/blog/share/es.html">
+          ElasticSearch
+        </a>
+        →
+      </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/blog/assets/js/app.3e99f69d.js" defer></script><script src="/blog/assets/js/2.1d01ac6d.js" defer></script><script src="/blog/assets/js/12.9889c9d8.js" defer></script>
+  </body>
+</html>
