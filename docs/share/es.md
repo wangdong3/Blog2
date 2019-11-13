@@ -189,7 +189,7 @@ ELasticsearch使用Javascript对象符号(JavaScript Object Notation)，也就�
         ]
     }
 }
-```  
+```
 > 在结尾使用关键字 _search 来取代原来的文档ID。响应内容的 hits 数组中包含了我们所有的三个文档。默认情况下搜索会返回前10个结果。
 
 接下来，让我们搜索姓氏中包含“Smith”的员工。要做到这一点，我们将在命令行中使用轻量级的搜索方法。这种方法常被称作查询字符串(query string)搜索，因为我们像传递URL参数一样去传递查询语句
@@ -270,7 +270,7 @@ ELasticsearch使用Javascript对象符号(JavaScript Object Notation)，也就�
         }
     }
 }
-```  
+```
 
 **全文搜索**  
 到目前为止搜索都很简单：简单的名字，通过年龄筛选。让我们尝试一种更高级的搜索，全文搜索——一种传统数据库很难实现的功能。
@@ -284,7 +284,7 @@ ELasticsearch使用Javascript对象符号(JavaScript Object Notation)，也就�
 		}
 	}
 }
-```  
+```
 > Elasticsearch根据相关评分排序，相关评分是根据文档与语句的匹配度来得出  
 
 
@@ -299,7 +299,7 @@ ELasticsearch使用Javascript对象符号(JavaScript Object Notation)，也就�
 		}
 	}
 }
-```  
+```
 
 **高亮我们的搜索**  
 从每个搜索结果中高亮(highlight)匹配到的关键字，以便用户可以知道为什么文档这样匹配查询。Elasticsearch中高亮片段是非常容易的。
@@ -318,7 +318,7 @@ ELasticsearch使用Javascript对象符号(JavaScript Object Notation)，也就�
         }
     }
 }
-```   
+```
 
 **分析**  
 
@@ -332,7 +332,7 @@ Elasticsearch把这项功能叫做聚合(aggregations)，它允许你在数据�
 		}
 	}
 }
-```   
+```
 返回结果：
 ```json
 {
@@ -418,4 +418,10 @@ Elasticsearch把这项功能叫做聚合(aggregations)，它允许你在数据�
 ## 内部原理  
 
 ## 搜索过程  
+
+## 问题：
+
+**match** **term** 全词匹配，分词匹配
+
+**索引分配分片**：根据数据量做分片，一个分片多少数据量
 
