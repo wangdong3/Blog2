@@ -148,3 +148,36 @@ AOP原理
 			ProxyTransactionManagementConfiguration，给容器中注册事务增强器，事务拦截器
 
 ## spring源码，设计模式
+
+
+
+## spring事务传播特性
+
+> 调用者事务与被调用者事务之间的关系
+
+**七种事务传播行为：**
+1、mandatory        使用当前事务，如果当前没有事务，就抛出异常。强制性。
+
+2、requires_new     新建事务，如果当前有事务，把当前事务挂起。
+					（1）在外围方法未开启事务的情况下Propagation.REQUIRES_NEW修饰的内部方法会新开启自己的事务，且开启的事务相互独立，互不干扰。
+					（2）在外围方法开启事务的情况下Propagation.REQUIRES_NEW修饰的内部方法依然会单独开启独立事务，且与外部方法事务也独立，内部方法之间、内部方法和外部方法事务均相互独立，互不干扰。
+3、required         如果当前没有事务，则新建一个事务，若有，就加入到这个事务中。最常见的选择。
+					（1）在外围方法未开启事务的情况下Propagation.REQUIRED修饰的内部方法会新开启自己的事务，且开启的事务相互独立，互不干扰。
+					（2）在外围方法开启事务的情况下Propagation.REQUIRED修饰的内部方法会加入到外围方法的事务中，所有Propagation.REQUIRED修饰的内部方法和外围方法均属于同一事务，只要一个方法回滚，整个事务均回滚。
+4、nested           如果当前存在事务，则在嵌套事务内执行。如果当前没有事务，则执行与required类似的操作。
+					（1）在外围方法未开启事务的情况下Propagation.NESTED和Propagation.REQUIRED作用相同，修饰的内部方法都会新开启自己的事务，且开启的事务相互独立，互不干扰。
+					（2）在外围方法开启事务的情况下Propagation.NESTED修饰的内部方法属于外部事务的子事务，外围主事务回滚，子事务一定回滚，而内部子事务可以单独回滚而不影响外围主事务和其他子事务
+
+5、supports         支持当前事务，如果没有事务，就以非事务方式执行。
+6、not_supported    以非事务的方式执行操作，如果当前存在事务，则挂起事务。
+7、never            以非事务的方式执行，如果当前存在事务，则抛出异常。
+
+**事务失效场景：**
+1、@Transaction注解用在非public方法上
+2、propagation属性设为not_supported，never，也会失效
+3、rollbackFor属性设置的值默认会对RuntimeException和Error有效，对于其他异常会无效
+4、同一个类中方法调用会导致事务失效
+5、自己将异常catch，不回滚
+6、数据库引擎不支持事务，myisam引擎不支持事务，innodb引擎支持事务
+7、数据源 没有配置事务管理器，例如jdbc和mybatis用的DataSourceTransactionManager
+8、一个方法内多数据源的情况下会失效
